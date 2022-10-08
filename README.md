@@ -1,4 +1,3 @@
-
 "# api-books"
 
 ##### Intrucciones para correr y utilizar la api en local:
@@ -79,8 +78,10 @@ importar cors para acceso desde navegador:
 @RequestMapping("/libros")
 public class LibrosController {
 
-
     --------------------
+
 para correr en local es necesario correr XAMPP y activar APACHE y MYSQL
+y ejecuta
+mvnw.cmd spring-boot:run
 👇👇👇// EL SERVIDOR QUEDARA ACTIVO EN LA URL👇
 http://localhost:8080/books/
