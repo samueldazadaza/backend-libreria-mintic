@@ -92,3 +92,13 @@ y ejecuta
 mvnw.cmd spring-boot:run
 👇👇👇// EL SERVIDOR QUEDARA ACTIVO EN LA URL👇
 http://localhost:8080/books/
+
+
+nueva base de datos en la nube: 
+# port
+server.port=${PORT:8090}
+
+spring.datasource.url = jdbc:mysql://db4free.net:3306/libreriamintic
+spring.datasource.username = grupo09mintic
+spring.datasource.password = Grupo092022*mintic
+spring.jpa.hibernate.ddl-auto = update 
