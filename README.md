@@ -102,3 +102,4 @@ spring.datasource.url = jdbc:mysql://db4free.net:3306/libreriamintic
 spring.datasource.username = grupo09mintic
 spring.datasource.password = Grupo092022*mintic
 spring.jpa.hibernate.ddl-auto = update 
+# back-mintic2
