@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.models.LibrosModel;
 import com.example.demo.services.LibrosService;
 
-
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping("/libros")
@@ -26,33 +25,33 @@ public class LibrosController {
     LibrosService librosService;
 
     @GetMapping()
-    public ArrayList<LibrosModel> obtenerUsuarios(){
+    public ArrayList<LibrosModel> obtenerLibros() {
         return librosService.obtenerLibros();
     }
 
     @PostMapping()
-    public LibrosModel guardarLibro(@RequestBody LibrosModel id_libro){
+    public LibrosModel guardarLibro(@RequestBody LibrosModel id_libro) {
         return this.librosService.guardarLibros(id_libro);
     }
 
     @GetMapping(path = "/{id}")
-    public Optional<LibrosModel> obtenerLibroPorId(@PathVariable("id_libro") Long id_libro){
+    public Optional<LibrosModel> obtenerLibroPorId(@PathVariable("id_libro") Long id_libro) {
         return this.librosService.obtenerPorId(id_libro);
     }
 
     @GetMapping("/libros/titulo")
-    public ArrayList<LibrosModel> obtenerLibroPorTitulo(@RequestParam("titulo") String titulo){
+    public ArrayList<LibrosModel> obtenerLibroPorTitulo(@RequestParam("titulo") String titulo) {
         return this.librosService.obtenerPorTitulo(titulo);
     }
 
     @GetMapping("/libros/autor")
-    public ArrayList<LibrosModel> obtenerLibroPorAutor(@RequestParam("autor") String autor){
+    public ArrayList<LibrosModel> obtenerLibroPorAutor(@RequestParam("autor") String autor) {
         return this.librosService.obtenerPorAutor(autor);
     }
 
-    @DeleteMapping (path = "/{id_libro}")
-    public String eliminarPorId (@PathVariable("id_libro") Long id_libro) {
-        boolean ok = this.librosService.eliminarLibro (id_libro) ;
+    @DeleteMapping(path = "/{id_libro}")
+    public String eliminarPorId(@PathVariable("id_libro") Long id_libro) {
+        boolean ok = this.librosService.eliminarLibro(id_libro);
         if (ok) {
             return "Se eliminó el libro con id" + id_libro;
         } else {
