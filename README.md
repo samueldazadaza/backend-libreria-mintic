@@ -44,9 +44,11 @@ DELETE /// para eliminar un libro, digita el id en la POSTMAN con el metodo DELE
 //DIGITA EN EL ENDPOINT EL ID DEL LIBRO
 // el back responde ----> "Se eliminó el libro con id11"
 
-para ver un libro en especifico con el id: http://localhost:8080/books/2
 
-para ver lista de libros por generos: http://localhost:8080/books/query?genero=ficcion
+para ver lista de libros por titulo: http://localhost:8080/libros/titulo?titulo=libro6
+para ver lista de libros por autor: http://localhost:8080/libros/autor?autor=dan brown
+para ver lista de libros por ID LIBRO: http://localhost:8080/libros/14
+
 
 ---
 
@@ -67,7 +69,9 @@ server.port=${PORT:8080}
 
 spring.datasource.url = jdbc:mysql://db4free.net:3306/stocklibreria
 spring.datasource.username = grupo09
-spring.datasource.password = Grupo092022\*
+
+# spring.datasource.password = Grupo092022*
+
 spring.jpa.hibernate.ddl-auto = update
 
 ---

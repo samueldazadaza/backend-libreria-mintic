@@ -34,17 +34,17 @@ public class LibrosController {
         return this.librosService.guardarLibros(id_libro);
     }
 
-    @GetMapping(path = "/{id}")
+    @GetMapping(path = "/{id_libro}")
     public Optional<LibrosModel> obtenerLibroPorId(@PathVariable("id_libro") Long id_libro) {
         return this.librosService.obtenerPorId(id_libro);
     }
 
-    @GetMapping("/libros/titulo")
+    @GetMapping("/titulo")
     public ArrayList<LibrosModel> obtenerLibroPorTitulo(@RequestParam("titulo") String titulo) {
         return this.librosService.obtenerPorTitulo(titulo);
     }
 
-    @GetMapping("/libros/autor")
+    @GetMapping("/autor")
     public ArrayList<LibrosModel> obtenerLibroPorAutor(@RequestParam("autor") String autor) {
         return this.librosService.obtenerPorAutor(autor);
     }
@@ -53,9 +53,9 @@ public class LibrosController {
     public String eliminarPorId(@PathVariable("id_libro") Long id_libro) {
         boolean ok = this.librosService.eliminarLibro(id_libro);
         if (ok) {
-            return "Se eliminó el libro con id" + id_libro;
+            return "Se eliminó el libro con id👉: " + id_libro;
         } else {
-            return "No se pudo eliminar el libro con id" + id_libro;
+            return "No se pudo eliminar el libro con id👉: " + id_libro;
         }
     }
 }
