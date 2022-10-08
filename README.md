@@ -42,6 +42,7 @@ UPDATE /// para modificar libro (agregas id a modificar en el endpoint) ejecuta 
 
 DELETE /// para eliminar un libro, digita el id en la POSTMAN con el metodo DELETE, ejemplo: http://localhost:8080/books/1
 //DIGITA EN EL ENDPOINT EL ID DEL LIBRO
+// el back responde ----> "Se eliminó el libro con id11"
 
 para ver un libro en especifico con el id: http://localhost:8080/books/2
 
