@@ -14,7 +14,7 @@ mvnw.cmd spring-boot:run
 
 ---
 
-para crear libro ejecuta en postman en POST a la url: http://localhost:8080/books
+para crear libro ejecuta en postman en POST a la url: http://localhost:8080/libros
 {
 "titulo": "codigo da vinci",
 "autor": "dan brown",
