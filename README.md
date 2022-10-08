@@ -2,8 +2,10 @@
 
 ##### Intrucciones para correr y utilizar la api en local:
 
+CLONAR REPOSITORIO:
+https://github.com/samueldazadaza/backend-libreria-mintic
 ---
-
+instrucciones para correr api en VISUAL STUDIO CODE
 se crea una base de datos en mysql llamada 👉 springboot
 
 y se ejecuta en la raiz del proyecto la sigiente linea
@@ -28,7 +30,7 @@ CREATE /// para crear libro ejecuta en postman en POST a la url: http://localhos
 READ /// para LEER libros ejecuta en postman en GET a la url: http://localhost:8080/books
 //arrojara un array con los libros en base de datos mysql
 
-UPDATE /// para modificar libro (agregas id a modificar en el endpoint) ejecuta en postman en POST a la url: http://localhost:8080/books
+UPDATE /// para modificar libro (agregas id a modificar en el endpoint EN FORMATO JSON) ejecuta en postman en POST a la url: http://localhost:8080/books
 {
 "id_libro": 3,
 "titulo": "2 ///////// Años de Soledad22",
@@ -42,7 +44,7 @@ UPDATE /// para modificar libro (agregas id a modificar en el endpoint) ejecuta 
 
 DELETE /// para eliminar un libro, digita el id en la POSTMAN con el metodo DELETE, ejemplo: http://localhost:8080/books/1
 //DIGITA EN EL ENDPOINT EL ID DEL LIBRO
-// el back responde ----> "Se eliminó el libro con id11"
+// el back responde ----> "Se eliminó el libro con id 1"
 
 
 para ver lista de libros por titulo: http://localhost:8080/libros/titulo?titulo=libro6
@@ -61,7 +63,7 @@ spring.jpa.hibernate.ddl-auto = update
 
 ---
 
-configuracion remota:
+configuracion remota: //(TODAVIA NO FUNCIONA BIEN)
 
 # port
 
@@ -79,7 +81,7 @@ spring.jpa.hibernate.ddl-auto = update
 importar cors para acceso desde navegador:
 
 @RestController
-@CrossOrigin(origins = "\*")
+@CrossOrigin(origins = "*")
 @RequestMapping("/libros")
 public class LibrosController {
 
